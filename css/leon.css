@@ -9,8 +9,16 @@
   padding: 0px;
 }
 
+h1 {
+  margin: 20px;
+}
+
+h2, h3 {
+  margin: 15px;
+}
+
 :root {
-  --main-color:  rgb(86, 213, 198);
+  --main-color: rgb(80, 206, 191);
 }
 
 ul {
@@ -55,10 +63,12 @@ body {
     width: 1170px;
   }
 }
+header {
+  padding: 10px;
+}
 
 header .container {
   height: 50px;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,6 +80,7 @@ header .container {
 }
 
 .icon {
+  /* background-color: red; */
   width: 30px;
   height: 20px;
   /* background-color: green; */
@@ -100,7 +111,7 @@ span.line:nth-child(2) {
   background-color: #f6f6f6;
   position: absolute;
   top: calc(100%);
-  right: 0;
+  right: 10px;
   min-width: 200px;
   border-radius: 5px;
   display: flex;
@@ -114,7 +125,7 @@ span.line:nth-child(2) {
   content: "";
   position: absolute;
   top: -20px;
-  right: 10px;
+  right: 5px;
   border-width: 10px;
   border-color: transparent transparent #f6f6f6 transparent;
   border-style: solid;
@@ -153,12 +164,11 @@ span.line:nth-child(2) {
   position: absolute;
   /* background-color: red; */
   max-width: 100%;
-  width: 300px;
+  width: 350px;
   text-align: center;
 }
 
 .landing .intro-text h1 {
-  margin: 0;
   font-size: 50px;
   font-weight: bold;
   color: var(--main-color);
@@ -166,5 +176,40 @@ span.line:nth-child(2) {
 
 .landing .intro-text p {
   font-size: 20px;
+  line-height: 1.8;
+}
+
+/* features */
+/* ====================== */
+
+.features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.features .feat {
+  text-align: center;
+}
+
+.features .feat i {
+  color: var(--main-color);
+}
+
+
+.features .feat h3 {
+  color: #333;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.features .feat p {
+  color: #777;
+  font-size: 15px;
   line-height: 1.8;
 }
