@@ -4,23 +4,37 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   font-family: "work-sans";
 }
 
-.parent {
+/* .parent {
   background-color: #eee;
-}
+} */
 
 .container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #ddd;
+  /* background-color: #ddd; */
 }
 
- @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .container {
     width: 750px;
   }
@@ -38,3 +52,87 @@ body {
   }
 }
 
+
+
+header .container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  height: 25px;
+}
+
+.icon {
+  width: 30px;
+  height: 20px;
+  /* background-color: green; */
+  display: flex; /*span display is inline so I need flex to make it block and also to tie up the design of the icon */
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+}
+
+span.line {
+  width: 100%;
+  height: 2.5px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+span.line:nth-child(2) {
+  width: 80%;
+  transition: 0.2s;
+}
+
+.icon:hover span.line:nth-child(2) {
+  width: 100%;
+}
+
+.links ul {
+  background-color: #eee;
+  position: absolute;
+  top: calc(100%);
+  right: 0;
+  min-width: 150px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  display: none;
+}
+
+.links ul::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  border-width: 10px;
+  border-color: transparent transparent #eee transparent;
+  border-style: solid;
+
+}
+
+.links:hover ul {
+  display: block;
+}
+
+.links ul li a {
+  display: block;
+  width: 100%;
+  padding: 7.5px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.links ul li a:hover {
+  padding-left: 15px;
+}
+
+.links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
