@@ -250,7 +250,7 @@ span.line:nth-child(2) {
 }
 
 .services-area {
-  margin-top: 60px;
+  margin-top: var(--section-padding);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
@@ -353,4 +353,94 @@ span.line:nth-child(2) {
 .portfolio .projects-area .project-card .text p {
   color: #777;
   line-height: 1.6;
+}
+
+/* about */
+/* ====================== */
+
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.about .about-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+  margin-top: var(--section-padding);
+}
+
+.about .about-area .image {
+  width: 300px;
+  height: 450px;
+  position: relative;
+}
+
+.about .about-area .image::before {
+  content: "";
+  width: 75px;
+  height: 120%;
+  background-color: #eee;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.about .about-area .image::after{
+  content: "";
+  border-left: 75px solid var(--primary-color);
+  border-bottom: 75px solid var(--primary-color);
+  width: 100px;
+  height: 50%;
+  position: absolute;
+  right: -120px;
+  top: -45px;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .about .about-area {
+    justify-items: center;
+  }
+  .about .about-area .image {
+    margin: 30px;
+  }
+  .about .about-area .image::before{ 
+    display: none;
+  }
+  .about .about-area .image::after{ 
+    display: none;
+  }
+
+
+}
+
+.about .about-area .image img {
+  width: 100%;
+}
+
+.about .about-area .text {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about .about-area .text p {
+  line-height: 1.8;
+}
+
+.about .about-area .text p:first-child {
+  font-weight: bold;
+}
+
+.about .about-area .text hr {
+  border-color: var(--primary-color);
+  margin: 40px 0 20px;
+}
+
+.about .about-area .text p:nth-child(3) {
+  color: #777;
 }
