@@ -317,3 +317,40 @@ span.line:nth-child(2) {
     display: none;
   }
 }
+
+/* portfolio */
+/* ====================== */
+
+.portfolio {
+  background-color: #f6f6f6;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.portfolio .projects-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: var(--section-padding);
+}
+
+.portfolio .projects-area .project-card {
+  background-color: white;
+}
+
+.portfolio .projects-area .project-card img {
+  width: 100%;
+}
+
+.portfolio .projects-area .project-card .text {
+  padding: 15px;
+}
+
+.portfolio .projects-area .project-card .text h3 {
+  margin: 10px 0;
+}
+
+.portfolio .projects-area .project-card .text p {
+  color: #777;
+  line-height: 1.6;
+}
