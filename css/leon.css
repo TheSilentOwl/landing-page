@@ -67,6 +67,7 @@ body {
 
 :root {
   --primary-color: rgb(80, 206, 191);
+  --secondary-color: rgb(40, 40, 81);
   --section-padding: 60px;
 }
 
@@ -300,7 +301,7 @@ span.line:nth-child(2) {
   content: "";
   width: 90px;
   height: 120%;
-  background-color: rgb(40, 40, 81);
+  background-color: var(--secondary-color);
   position: absolute;
   right: -35px;
   top: 50%;
@@ -388,14 +389,14 @@ span.line:nth-child(2) {
   z-index: -1;
 }
 
-.about .about-area .image::after{
+.about .about-area .image::after {
   content: "";
   border-left: 75px solid var(--primary-color);
   border-bottom: 75px solid var(--primary-color);
   width: 100px;
   height: 50%;
   position: absolute;
-  right: -120px;
+  right: -130px;
   top: -45px;
   z-index: -1;
 }
@@ -407,14 +408,12 @@ span.line:nth-child(2) {
   .about .about-area .image {
     margin: 30px;
   }
-  .about .about-area .image::before{ 
+  .about .about-area .image::before {
     display: none;
   }
-  .about .about-area .image::after{ 
+  .about .about-area .image::after {
     display: none;
   }
-
-
 }
 
 .about .about-area .image img {
@@ -443,4 +442,38 @@ span.line:nth-child(2) {
 
 .about .about-area .text p:nth-child(3) {
   color: #777;
+}
+
+/* contact */
+/* ====================== */
+
+.contact {
+  background-color: #f6f6f6;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+}
+
+.contact h3 {
+  margin-top: calc(var(--section-padding) * 2);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+
+.contact a {
+  margin-top: calc(var(--section-padding) * 2);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.contact a + p {
+  margin-top: calc(var(--section-padding) - 50px);
+}
+
+.contact a + p i {
+  margin-left: 10px;
+  color: var(--secondary-color);
+  font-size: 20px;
 }
